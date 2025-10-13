@@ -1,0 +1,163 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page layout */
+body {
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main card */
+.card {
+  width: 650px;
+  height: 350px;
+  border: 3px solid #a67ef5;
+  border-radius: 6px;
+  background: white;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Small top label */
+.header {
+  background-color: #d9c36b;
+  color: black;
+  font-weight: bold;
+  padding: 6px 14px;
+  position: absolute;
+  top: -16px;
+  left: 20px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+/* Layout inside the card */
+.content {
+  display: flex;
+  padding: 40px 30px 30px;
+  height: 100%;
+}
+
+/* Left section: Name, Duration, + icon */
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centers vertically */
+  align-items: flex-start;
+  padding-right: 10px;
+  gap: 50px; /* space between text and + */
+}
+
+/* Labels */
+.info p {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Yellow + icon */
+.add-icon {
+  background-color: #f3d25b;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: center; /* centers horizontally */
+  transition: all 0.2s ease;
+}
+
+.add-icon:hover {
+  transform: scale(1.1);
+  background-color: #f7d94b;
+}
+
+/* Black divider */
+.divider {
+  width: 2px;
+  background-color: black;
+  margin: 0 15px;
+}
+
+/* Right side content blocks */
+.right-panel {
+  flex: 2.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+/* Row with yellow square and pink bar */
+.block {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Yellow rounded square */
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #f3d25b;
+  border-radius: 10px;
+}
+
+/* Pink content bars */
+.bar {
+  background-color: #f6b5da;
+  height: 45px;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.bar.short {
+  height: 25px;
+}
+
+.bar.long {
+  height: 70px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 700px) {
+  .card {
+    width: 95%;
+    height: auto;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divider {
+    width: 80%;
+    height: 2px;
+    margin: 15px 0;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .add-icon {
+    margin-top: 20px;
+  }
+}
