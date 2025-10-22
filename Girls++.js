@@ -1,8 +1,8 @@
 var taskList = [];
 
 class Task {
-    constructor(){
-
+    constructor(name, due_date, duration, priority, desc, color){
+        // types: string, string DD-MM-YYYY, int, int, string, string in hex format #XXXXXX
     }
 }
 
