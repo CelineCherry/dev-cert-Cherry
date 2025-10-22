@@ -7,6 +7,8 @@ class Task {
 }
 
 
+
+
 function onAddTask(){
     //take data and add an object to taskList    
     sortTaskList()
